@@ -42,3 +42,8 @@
   Please.equal(vec.toList[1], 7)
   Please.equal(vec.toList[2], 8)
 }
+
+{
+  var vec = new Vector(10, 1.2, -3.1)
+  Please.equal(vec.toString, "Vector(10, 1.2, -3.1)")
+}

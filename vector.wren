@@ -32,5 +32,9 @@ class Vector {
   z=(v) { _z = v }
 
   toList { [x, y, z] }
+  toString {
+    var coords = x.toString + ", " + y.toString + ", " + z.toString
+    return "Vector(" + coords + ")"
+  }
 
 }
