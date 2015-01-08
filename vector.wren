@@ -38,6 +38,10 @@ class Vector {
 
   -(other) { this + -other }
 
+  *(other) {
+    return new Vector(x * other, y * other, z * other)
+  }
+
   toList { [x, y, z] }
   toString {
     var coords = x.toString + ", " + y.toString + ", " + z.toString

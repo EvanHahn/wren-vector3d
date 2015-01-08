@@ -98,3 +98,10 @@
   Please.equal(vec.y, -2)
   Please.equal(vec.z, -3)
 }
+
+{
+  var vec = new Vector(1, 2, 3) * 10
+  Please.equal(vec.x, 10)
+  Please.equal(vec.y, 20)
+  Please.equal(vec.z, 30)
+}
