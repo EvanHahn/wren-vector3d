@@ -31,6 +31,17 @@ class Vector {
   y=(v) { _y = v }
   z=(v) { _z = v }
 
+  set(a, b) {
+    x = a
+    y = b
+  }
+
+  set(a, b, c) {
+    x = a
+    y = b
+    z = c
+  }
+
   toList { [x, y, z] }
   toString {
     var coords = x.toString + ", " + y.toString + ", " + z.toString
