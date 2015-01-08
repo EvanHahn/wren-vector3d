@@ -22,10 +22,6 @@ class Vector {
     z = c
   }
 
-  - {
-    return new Vector(-x, -y, -z)
-  }
-
   +(other) {
     var result
     if (other is Num) {
@@ -36,6 +32,7 @@ class Vector {
     return result
   }
 
+  - { new Vector(-x, -y, -z) }
   -(other) { this + -other }
 
   *(v) { new Vector(x * v, y * v, z * v) }
