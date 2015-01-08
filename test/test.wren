@@ -63,3 +63,17 @@
   var vec = new Vector(10, 1.2, -3.1)
   Please.equal(vec.toString, "Vector(10, 1.2, -3.1)")
 }
+
+{
+  var vec = new Vector(1, 2, 3) + 10
+  Please.equal(vec.x, 11)
+  Please.equal(vec.y, 12)
+  Please.equal(vec.z, 13)
+}
+
+{
+  var vec = new Vector(1, 2, 3) + new Vector(4, 5, 6)
+  Please.equal(vec.x, 5)
+  Please.equal(vec.y, 7)
+  Please.equal(vec.z, 9)
+}

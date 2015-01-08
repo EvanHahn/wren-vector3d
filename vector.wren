@@ -1,28 +1,9 @@
 class Vector {
 
-  new {
-    x = 0
-    y = 0
-    z = 0
-  }
-
-  new(v) {
-    x = v
-    y = v
-    z = 0
-  }
-
-  new(a, b) {
-    x = a
-    y = b
-    z = 0
-  }
-
-  new(a, b, c) {
-    x = a
-    y = b
-    z = c
-  }
+  new          { set(0, 0, 0) }
+  new(v)       { set(v, v, 0) }
+  new(a, b)    { set(a, b, 0) }
+  new(a, b, c) { set(a, b, c) }
 
   x { _x }
   y { _y }
@@ -35,11 +16,20 @@ class Vector {
     x = a
     y = b
   }
-
   set(a, b, c) {
     x = a
     y = b
     z = c
+  }
+
+  +(other) {
+    var result
+    if (other is Num) {
+      result = new Vector(x + other, y + other, z + other)
+    } else {
+      result = new Vector(x + other.x, y + other.y, z + other.z)
+    }
+    return result
   }
 
   toList { [x, y, z] }
