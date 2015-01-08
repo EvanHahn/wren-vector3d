@@ -105,3 +105,18 @@
   Please.equal(vec.y, 20)
   Please.equal(vec.z, 30)
 }
+
+{
+  var vec = new Vector(10, 20, 30) / 10
+  Please.equal(vec.x, 1)
+  Please.equal(vec.y, 2)
+  Please.equal(vec.z, 3)
+}
+
+{
+  var a = new Vector(1, 2, 3)
+  var b = new Vector(4, 5, 6)
+  Please.equal(a.distanceTo(b), b.distanceTo(a))
+  Please.equal(a.distanceTo(b), 27.sqrt)
+  Please.equal(Vector.distance(a, b), 27.sqrt)
+}

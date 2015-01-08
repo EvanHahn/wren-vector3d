@@ -41,6 +41,15 @@ class Vector {
   *(v) { new Vector(x * v, y * v, z * v) }
   /(v) { new Vector(x / v, y / v, z / v) }
 
+  distanceTo(other) { Vector.distance(this, other) }
+
+  static distance(a, b) {
+    var xdiff = a.x - b.x
+    var ydiff = a.y - b.y
+    var zdiff = a.z - b.z
+    return ((xdiff * xdiff) + (ydiff * ydiff) + (zdiff * zdiff)).sqrt
+  }
+
   toList { [x, y, z] }
   toString {
     var coords = x.toString + ", " + y.toString + ", " + z.toString
