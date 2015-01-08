@@ -22,6 +22,10 @@ class Vector {
     z = c
   }
 
+  - {
+    return new Vector(-x, -y, -z)
+  }
+
   +(other) {
     var result
     if (other is Num) {
@@ -31,6 +35,8 @@ class Vector {
     }
     return result
   }
+
+  -(other) { this + -other }
 
   toList { [x, y, z] }
   toString {

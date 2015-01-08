@@ -77,3 +77,24 @@
   Please.equal(vec.y, 7)
   Please.equal(vec.z, 9)
 }
+
+{
+  var vec = new Vector(1, 2, 3) - 10
+  Please.equal(vec.x, -9)
+  Please.equal(vec.y, -8)
+  Please.equal(vec.z, -7)
+}
+
+{
+  var vec = new Vector(1, 2, 3) - new Vector(4, 6, 8)
+  Please.equal(vec.x, -3)
+  Please.equal(vec.y, -4)
+  Please.equal(vec.z, -5)
+}
+
+{
+  var vec = -(new Vector(1, 2, 3))
+  Please.equal(vec.x, -1)
+  Please.equal(vec.y, -2)
+  Please.equal(vec.z, -3)
+}
