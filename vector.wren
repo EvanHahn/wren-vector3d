@@ -38,9 +38,8 @@ class Vector {
 
   -(other) { this + -other }
 
-  *(other) {
-    return new Vector(x * other, y * other, z * other)
-  }
+  *(v) { new Vector(x * v, y * v, z * v) }
+  /(v) { new Vector(x / v, y / v, z / v) }
 
   toList { [x, y, z] }
   toString {
