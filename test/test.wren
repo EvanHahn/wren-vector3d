@@ -120,3 +120,19 @@
   Please.equal(a.distanceTo(b), 27.sqrt)
   Please.equal(Vector.distance(a, b), 27.sqrt)
 }
+
+{
+  var a = new Vector(1, 2, 3)
+  var b = new Vector(1, 2, 3)
+  var c = new Vector(4, 5, 6)
+  Please.equal(true, a == a)
+  Please.equal(true, a == b)
+  Please.equal(true, a != c)
+  Please.equal(true, b == a)
+  Please.equal(true, b != c)
+  Please.equal(false, a != a)
+  Please.equal(false, a != b)
+  Please.equal(false, a == c)
+  Please.equal(false, b != a)
+  Please.equal(false, b == c)
+}

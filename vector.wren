@@ -31,15 +31,15 @@ class Vector {
     }
     return result
   }
-
   - { new Vector(-x, -y, -z) }
   -(other) { this + -other }
-
   *(v) { new Vector(x * v, y * v, z * v) }
   /(v) { new Vector(x / v, y / v, z / v) }
 
-  distanceTo(other) { Vector.distance(this, other) }
+  ==(other) { (x == other.x) && (y == other.y) && (z == other.z) }
+  !=(other) { !(this == other) }
 
+  distanceTo(other) { Vector.distance(this, other) }
   static distance(a, b) {
     var xdiff = a.x - b.x
     var ydiff = a.y - b.y
