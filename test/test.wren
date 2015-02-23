@@ -1,3 +1,6 @@
+import "please" for Please
+import "../vector" for Vector
+
 {
   var vec = new Vector
 
@@ -136,3 +139,5 @@
   Please.equal(false, b != a)
   Please.equal(false, b == c)
 }
+
+IO.print("All tests passed!")

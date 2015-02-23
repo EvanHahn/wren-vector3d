@@ -1,9 +1,11 @@
 3D vectors for [Wren](https://munificent.github.io/wren/)
 =========================================================
 
-Usage:
+3D vector library for Wren.
 
 ```dart
+import "vector" for Vector
+
 var zero = new Vector             // Set to (0, 0, 0)
 var ones = new Vector(1)          // Set to (1, 1, 0)
 var twoD = new Vector(1, 2)       // Set to (1, 2, 0)
@@ -33,13 +35,11 @@ Vector.distance(vecA, vecB)  // 5.196...
 (-vecA).toString      // "Vector(-1, -2, -3)"
 ```
 
-Until some kind of [include/require/import](https://github.com/munificent/wren/issues/46) is added, you'll have to paste `vector.wren` at the top of your file.  Then:
-
 Running tests
 -------------
 
 To run tests, run this:
 
 ```sh
-WREN_PATH=/path/to/wren test.sh
+wren tests/test.wren
 ```
