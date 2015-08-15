@@ -1,9 +1,9 @@
 class Vector {
 
-  new          { set(0, 0, 0) }
-  new(v)       { set(v, v, 0) }
-  new(a, b)    { set(a, b, 0) }
-  new(a, b, c) { set(a, b, c) }
+  construct new()        { set(0, 0, 0) }
+  construct new(v)       { set(v, v, 0) }
+  construct new(a, b)    { set(a, b, 0) }
+  construct new(a, b, c) { set(a, b, c) }
 
   x { _x }
   y { _y }
@@ -25,16 +25,16 @@ class Vector {
   +(other) {
     var result
     if (other is Num) {
-      result = new Vector(x + other, y + other, z + other)
+      result = Vector.new(x + other, y + other, z + other)
     } else {
-      result = new Vector(x + other.x, y + other.y, z + other.z)
+      result = Vector.new(x + other.x, y + other.y, z + other.z)
     }
     return result
   }
-  - { new Vector(-x, -y, -z) }
+  - { Vector.new(-x, -y, -z) }
   -(other) { this + -other }
-  *(v) { new Vector(x * v, y * v, z * v) }
-  /(v) { new Vector(x / v, y / v, z / v) }
+  *(v) { Vector.new(x * v, y * v, z * v) }
+  /(v) { Vector.new(x / v, y / v, z / v) }
 
   ==(other) { (x == other.x) && (y == other.y) && (z == other.z) }
   !=(other) { !(this == other) }
