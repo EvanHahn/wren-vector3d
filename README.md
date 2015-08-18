@@ -6,12 +6,12 @@
 ```dart
 import "vector" for Vector
 
-var zero = new Vector             // Set to (0, 0, 0)
-var ones = new Vector(1)          // Set to (1, 1, 0)
-var twoD = new Vector(1, 2)       // Set to (1, 2, 0)
-var threeD = new Vector(1, 2, 3)  // Set to (1, 2, 3)
+var zero = Vector.new()           // Set to (0, 0, 0)
+var ones = Vector.new(1)          // Set to (1, 1, 0)
+var twoD = Vector.new(1, 2)       // Set to (1, 2, 0)
+var threeD = Vector.new(1, 2, 3)  // Set to (1, 2, 3)
 
-var vec = new Vector(4, 5, 6)
+var vec = Vector.new(4, 5, 6)
 vec.toString  // "Vector(4, 5, 6)"
 
 vec.x = vec.y + 10
@@ -20,8 +20,8 @@ vec.toString  // "Vector(4, 15, 6)"
 vec.set(7, 8, 9)
 vec.toString  // "Vector(7, 8, 9)"
 
-var vecA = new Vector(1, 2, 3)
-var vecB = new Vector(4, 5, 6)
+var vecA = Vector.new(1, 2, 3)
+var vecB = Vector.new(4, 5, 6)
 
 (vecA + vecB).toString       // "Vector(5, 7, 9)"
 (vecA - vecB).toString       // "Vector(-3, -3, -3)"
